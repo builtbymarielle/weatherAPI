@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+  <div class="top-row">
+    <button type="button" class="nav-btn">
+        <span class="material-icons">menu</span>
+    </button>
+    <div class="search">
+      <input type="text" placeholder="Search for city" id="city" value="">
+      <div id="submit" class="submit" onclick="getLocationWeather()">submit</div>
+    </div>
+    <div class="webTitle">SkyAlert</div>
+    
+</div>
+
+<div class="nav-overlay"></div>
+<nav class="nav">
+    <a class="closebtn" href="#"> X</a>
+    <a href="index.html" class="nav-link">Weather Forcast</a>
+    <a href="index.html" class="nav-link">Radar & Maps</a>
+    <a href="index.html" class="nav-link">Health & Wellness</a>
+    <a href="index.html" class="nav-link">More...</a>
+    <a href="create.html" onclick="createAccountPage()" class="nav-link darkbluebg">Create an Account</a>
+    <a href="login.html" onclick="loginAccountPage()" class="nav-link darkbluebg">Login</a>
+
+
+
+    <h2 class="nav-setting">Weather Settings</h2>
+
+    <div id="degreeType">
+      <h2>Fahrenheit </h2>
+	    <input onclick="degreeType()" type="checkbox" id="toggle-btn" value="f">
+	    <label for="toggle-btn"></label>
+      <h2>Celcius</h2>
+    </div>
+
+
+    <div class="lengthContent">
+      <h2>Forecast Day Length</h2>
+      <button class="valueButton btn1 submit" id="decrement">-</button>
+      <input class="valueInput" type="text" id="length" value="2" readonly>
+      <button class="valueButton btn2 submit" id="increment">+</button>
+    </div>
+
+  
+</nav>
+
+
+<div class="wave-header">
+  <svg class="wave1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="white" fill-opacity="1" d="M0,192L48,202.7C96,213,192,235,288,256C384,277,480,299,576,261.3C672,224,768,128,864,112C960,96,1056,160,1152,202.7C1248,245,1344,267,1392,277.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+  <div class="weatherCon">
+
+    <div class="weatherContent"></div>
+  </div>
+</div>
+
+ <div class="forecastSection"></div>
+
+<div class="bonusWeatherInfo">
+  <div class="bonusWeatherContent"></div>
+</div>
+
+
+    <footer>
+      <div class="footer-content">
+        <h3>SkyAlert</h3>
+        <p>Download SkyAlert today to make informed decisions based on the most accurate and timely weather information available. Don't let the weather catch you off guard - let SkyAlert be your weather companion.</p>
+        <p>Stay connected with SkyAlert on social media to stay up-to-date with the latest features, tips, and weather-related news:</p>
+  
+        <ul class="socials">
+          <li><a href="#"><img style="width:30px; height:30px" src="img/icons8-twitter.svg" alt=""></a></li>
+          <li><a href="#"><img style="width:30px; height:30px" src="img/facebook.png" alt=""></a></li>
+          <li><a href="#"><img style="width:30px; height:30px" src="img/instagram.svg" alt=""></a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-bottom">
+        <p>Copyright &copy <span id="year">2023</span> <a href="#">Marielle Harrell</a> </p>
+        <div class="footer-menu">
+          <ul class="f-menu">
+            <li><a href="">Weather Forecast</a></li>
+            <li><a href="">Radar & Maps</a></li>
+            <li><a href="">Health & Wellness</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="app/app.js"></script>
+    
+</body>
+</html>

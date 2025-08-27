@@ -1,0 +1,171 @@
+
+.wave-header{
+    min-height: 90vh;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(#0F7CBF, #C2E0F2);
+    margin-bottom: 50px;
+
+    .wave1{
+        position: absolute;
+        z-index: 5;
+        bottom: 0;
+        left: 0;
+    }
+    .weatherCon{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-top: 50px;
+        position: absolute;
+        z-index: 13;
+        width: 100%;
+        .loginContent{
+            width: 350px;
+            height: 450px;
+            box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+            border-radius: 20px;
+            text-align: center;
+    
+            .currentWeather{
+                width: 100%;
+                height: 32%;
+                background: linear-gradient(#0F7CBF, #C2E0F2);
+                padding: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius:  10px 10px 0 0 ;
+                position: relative;
+
+                
+                h1{
+                    font-size: 36px;
+                    font-weight: bold;
+                    text-align: left;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    color: white;
+                }
+
+                .wave2{
+                    position: absolute;
+                    z-index: 5;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                }
+                
+            }
+    
+            .loginInfo{
+                width: 100%;
+                height: 330px;
+                background-color: white;
+                border-radius:  0 0 10px 10px;
+                padding: 50px;
+                justify-content: right;
+                text-align: left;
+                margin-top: -20px;   
+                border-radius: 20px 20px 10px 10px;
+                h3{
+                    color: $site-blue;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-weight: lighter;
+                    font-size: 24px;
+                }
+                
+                .loginInput{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    input{
+                        border: none;
+                        border-bottom: 1px solid $site-lightblue;
+                        width: 90%;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        color: $site-blue;
+                    }
+                    input::placeholder {
+                        color: $site-lightblue;
+                        font-style: italic;
+                    }
+
+                    input:focus {
+                        color: $site-blue;
+                        font-style: normal;
+                        outline: none;
+                    }
+                }
+                .signUpBtn{
+                    width: 100px;
+                    border-radius: 20px;
+                    height: 32px;
+                    background-color: $site-lightyellow;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    color: white;
+                    transition: 0.3s ease;
+                    font-size: 14px;
+                    margin-top: 10px;
+
+                }
+
+                .signUpBtn:hover{
+                    background-color: $site-yellow;
+                    cursor: pointer;
+                }
+
+                .logBtn{
+                    margin-top: 20px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 12px;
+                    color: $site-lightblue;
+                    font-style: italic;
+                    font-size: 10px;
+                    transition: 0.3s ease;
+                }
+
+                .logBtn:hover{
+                    color: $site-blue;
+                    cursor: pointer;
+                }
+    
+            }
+            
+        }
+    }
+    
+
+}
+
+@media screen and (max-width: 415px) and (min-height: 800px){
+    .wave-header{
+        min-height: 85vh;
+        .weatherCon{
+            .loginContent{
+                height: 500px;
+
+                .loginInfo{
+                    height: 440px;
+                }
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) and (max-height: 700px){
+    .wave-header{
+        min-height: 85vh;
+        .weatherCon{
+            .loginContent{
+                height: 400px;
+                
+            }
+        }
+    }
+}
+

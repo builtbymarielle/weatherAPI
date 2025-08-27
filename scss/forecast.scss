@@ -1,0 +1,88 @@
+.forecastSection{
+    min-height: 40vh;
+    padding-top: 50px;
+    padding-bottom: 35px;
+    margin-top: -5px;
+
+    .forecastSectionContent{
+        margin: 0 auto;
+        padding: 20px 50px;
+        width: 800px;
+        min-height: 150px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        h3{
+            color:$site-blue;
+            font-weight: lighter;
+        }
+
+        .dayInfo{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+            padding: 5px;
+            .day{
+                font-weight: bold;
+                color: $site-blue;
+                width: 100px;
+            }
+            .daylow{
+                width: 90px;
+            }
+            .dayhigh{
+                width: 90px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 900px) {
+    .forecastSection{    
+    padding-bottom: 30px;
+
+        .forecastSectionContent{
+            margin-bottom: 0;
+            width: 550px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .forecastSection{  
+        min-height: 200px;
+        padding-top: 50px;  
+        margin-bottom: 50px;
+    padding-bottom: 50px;
+
+        .forecastSectionContent{
+            width: 90%;
+            padding: 20px 10px;
+
+            .dayInfo{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 1px solid #eee;
+                padding: 5px;
+                .day{
+                    font-weight: bold;
+                    color: $site-blue;
+                    width: 75px;
+                    font-size: 12px;
+                }
+                .daylow{
+                    width: 65px;
+                    font-size: 12px;
+                }
+                .dayhigh{
+                    width: 65px;
+                    font-size: 12px;
+
+                }
+            }
+        }
+    }
+}
